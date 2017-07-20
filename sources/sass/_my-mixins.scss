@@ -1,0 +1,26 @@
+@mixin bordered($width, $color: black) {
+	border: $width solid $color;
+}
+
+@mixin border-radius( $radius ) {
+	@include    border-top-radius( $radius );
+	@include border-bottom-radius( $radius );
+}
+
+@mixin button-default( $color: $black, $border-color: $black, $border-width: 3px, $font-size: $font-size-large ) {
+	
+	text-decoration: none;
+	color: $color;
+	background: none;
+	border: none;
+	padding: 5px;
+	font-size: font-size;
+
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
